@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #06060F; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 60px; padding: 60px; }
+  .row { display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .bg { background: #06060F; padding: 40px; border-radius: 20px; }
+  .bg-alt { background: #F8FAFC; padding: 40px; border-radius: 20px; }
+  .label { color: #475569; font-family: monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; }
+
+  /* INLINE LOGO PREVIEW — nav context */
+  .nav-preview {
+    background: #06060F;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .nav-preview span {
+    font-family: 'system-ui', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #F8FAFC;
+    letter-spacing: -0.04em;
+  }
+  .nav-preview span em {
+    font-style: normal;
+    color: #38BDF8;
+  }
+</style>
+</head>
+<body>
+
+<div class="row">
+
+  <!-- LARGE VERSION: standalone mark -->
+  <div class="item">
+    <div class="bg">
+      <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="main-g" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#BAE6FD"/>
+            <stop offset="45%"  stop-color="#38BDF8"/>
+            <stop offset="100%" stop-color="#0369A1"/>
+          </linearGradient>
+          <linearGradient id="ring-g" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#38BDF8" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Single precision ring -->
+        <circle cx="100" cy="100" r="90" stroke="url(#ring-g)" stroke-width="1"/>
+
+        <!-- 4 compass ticks — minimal, elegant -->
+        <!-- North: slightly longer, accent -->
+        <line x1="100" y1="10" x2="100" y2="28" stroke="#38BDF8" stroke-width="2" stroke-linecap="square" opacity="0.55"/>
+        <!-- South, East, West: shorter -->
+        <line x1="100" y1="172" x2="100" y2="190" stroke="#0EA5E9" stroke-width="1.2" stroke-linecap="square" opacity="0.2"/>
+        <line x1="10"  y1="100" x2="28"  y2="100" stroke="#0EA5E9" stroke-width="1.2" stroke-linecap="square" opacity="0.2"/>
+        <line x1="172" y1="100" x2="190" y2="100" stroke="#0EA5E9" stroke-width="1.2" stroke-linecap="square" opacity="0.2"/>
+
+        <!-- N — precise geometry, square joins -->
+        <!-- Left stem -->
+        <line x1="28"  y1="140" x2="28"  y2="60"  stroke="url(#main-g)" stroke-width="9" stroke-linecap="square"/>
+        <!-- Diagonal -->
+        <line x1="28"  y1="60"  x2="72"  y2="120" stroke="url(#main-g)" stroke-width="9" stroke-linecap="square"/>
+        <!-- Right stem -->
+        <line x1="72"  y1="120" x2="72"  y2="60"  stroke="url(#main-g)" stroke-width="9" stroke-linecap="square"/>
+
+        <!-- W — proportionate, precise -->
+        <!-- Left outer stem -->
+        <line x1="90"  y1="60"  x2="104" y2="126" stroke="url(#main-g)" stroke-width="8" stroke-linecap="square"/>
+        <!-- Left inner slope -->
+        <line x1="104" y1="126" x2="118" y2="84"  stroke="url(#main-g)" stroke-width="8" stroke-linecap="square"/>
+        <!-- Right inner slope -->
+        <line x1="118" y1="84"  x2="132" y2="126" stroke="url(#main-g)" stroke-width="8" stroke-linecap="square"/>
+        <!-- Right outer stem -->
+        <line x1="132" y1="126" x2="146" y2="60"  stroke="url(#main-g)" stroke-width="8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="label">Mark — stor</span>
+  </div>
+
+  <!-- MEDIUM VERSION -->
+  <div class="item">
+    <div class="bg">
+      <svg width="100" height="100" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="main-g2" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#BAE6FD"/>
+            <stop offset="45%"  stop-color="#38BDF8"/>
+            <stop offset="100%" stop-color="#0369A1"/>
+          </linearGradient>
+          <linearGradient id="ring-g2" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#38BDF8" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="90" stroke="url(#ring-g2)" stroke-width="1"/>
+        <line x1="100" y1="10" x2="100" y2="28" stroke="#38BDF8" stroke-width="2" stroke-linecap="square" opacity="0.55"/>
+        <line x1="100" y1="172" x2="100" y2="190" stroke="#0EA5E9" stroke-width="1.2" stroke-linecap="square" opacity="0.2"/>
+        <line x1="10"  y1="100" x2="28"  y2="100" stroke="#0EA5E9" stroke-width="1.2" stroke-linecap="square" opacity="0.2"/>
+        <line x1="172" y1="100" x2="190" y2="100" stroke="#0EA5E9" stroke-width="1.2" stroke-linecap="square" opacity="0.2"/>
+        <line x1="28"  y1="140" x2="28"  y2="60"  stroke="url(#main-g2)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="28"  y1="60"  x2="72"  y2="120" stroke="url(#main-g2)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72"  y1="120" x2="72"  y2="60"  stroke="url(#main-g2)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="90"  y1="60"  x2="104" y2="126" stroke="url(#main-g2)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="104" y1="126" x2="118" y2="84"  stroke="url(#main-g2)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="118" y1="84"  x2="132" y2="126" stroke="url(#main-g2)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="132" y1="126" x2="146" y2="60"  stroke="url(#main-g2)" stroke-width="8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="label">Mark — medium</span>
+  </div>
+
+  <!-- SMALL / FAVICON -->
+  <div class="item">
+    <div class="bg">
+      <svg width="48" height="48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="main-g3" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#BAE6FD"/>
+            <stop offset="45%"  stop-color="#38BDF8"/>
+            <stop offset="100%" stop-color="#0369A1"/>
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="90" stroke="#38BDF8" stroke-width="1.5" opacity="0.2"/>
+        <line x1="100" y1="10" x2="100" y2="28" stroke="#38BDF8" stroke-width="3" stroke-linecap="square" opacity="0.5"/>
+        <line x1="28"  y1="140" x2="28"  y2="60"  stroke="url(#main-g3)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="28"  y1="60"  x2="72"  y2="120" stroke="url(#main-g3)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72"  y1="120" x2="72"  y2="60"  stroke="url(#main-g3)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="90"  y1="60"  x2="104" y2="126" stroke="url(#main-g3)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="104" y1="126" x2="118" y2="84"  stroke="url(#main-g3)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="118" y1="84"  x2="132" y2="126" stroke="url(#main-g3)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="132" y1="126" x2="146" y2="60"  stroke="url(#main-g3)" stroke-width="8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="label">Favicon</span>
+  </div>
+
+  <!-- LIGHT BG TEST -->
+  <div class="item">
+    <div class="bg-alt">
+      <svg width="100" height="100" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="main-g4" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#0EA5E9"/>
+            <stop offset="100%" stop-color="#0284C7"/>
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="90" stroke="#0EA5E9" stroke-width="1" opacity="0.2"/>
+        <line x1="100" y1="10" x2="100" y2="28" stroke="#0EA5E9" stroke-width="2" stroke-linecap="square" opacity="0.4"/>
+        <line x1="28"  y1="140" x2="28"  y2="60"  stroke="url(#main-g4)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="28"  y1="60"  x2="72"  y2="120" stroke="url(#main-g4)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72"  y1="120" x2="72"  y2="60"  stroke="url(#main-g4)" stroke-width="9" stroke-linecap="square"/>
+        <line x1="90"  y1="60"  x2="104" y2="126" stroke="url(#main-g4)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="104" y1="126" x2="118" y2="84"  stroke="url(#main-g4)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="118" y1="84"  x2="132" y2="126" stroke="url(#main-g4)" stroke-width="8" stroke-linecap="square"/>
+        <line x1="132" y1="126" x2="146" y2="60"  stroke="url(#main-g4)" stroke-width="8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="label">Ljus bakgrund</span>
+  </div>
+
+</div>
+
+<!-- Nav context preview -->
+<div class="nav-preview">
+  <svg width="36" height="36" viewBox="0 0 200 200" fill="none">
+    <defs>
+      <linearGradient id="nav-g" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+        <stop offset="0%"   stop-color="#BAE6FD"/>
+        <stop offset="45%"  stop-color="#38BDF8"/>
+        <stop offset="100%" stop-color="#0369A1"/>
+      </linearGradient>
+    </defs>
+    <circle cx="100" cy="100" r="90" stroke="#38BDF8" stroke-width="1.5" opacity="0.18"/>
+    <line x1="100" y1="10" x2="100" y2="28" stroke="#38BDF8" stroke-width="3" stroke-linecap="square" opacity="0.5"/>
+    <line x1="28"  y1="140" x2="28"  y2="60"  stroke="url(#nav-g)" stroke-width="9" stroke-linecap="square"/>
+    <line x1="28"  y1="60"  x2="72"  y2="120" stroke="url(#nav-g)" stroke-width="9" stroke-linecap="square"/>
+    <line x1="72"  y1="120" x2="72"  y2="60"  stroke="url(#nav-g)" stroke-width="9" stroke-linecap="square"/>
+    <line x1="90"  y1="60"  x2="104" y2="126" stroke="url(#nav-g)" stroke-width="8" stroke-linecap="square"/>
+    <line x1="104" y1="126" x2="118" y2="84"  stroke="url(#nav-g)" stroke-width="8" stroke-linecap="square"/>
+    <line x1="118" y1="84"  x2="132" y2="126" stroke="url(#nav-g)" stroke-width="8" stroke-linecap="square"/>
+    <line x1="132" y1="126" x2="146" y2="60"  stroke="url(#nav-g)" stroke-width="8" stroke-linecap="square"/>
+  </svg>
+  <span>Nordic<em>Webpartner</em></span>
+</div>
+
+</body>
+</html>
