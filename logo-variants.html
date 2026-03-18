@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #06060F; display: flex; flex-direction: column; align-items: center; padding: 60px 40px; gap: 60px; }
+  .row { display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .preview-dark { background: #06060F; border: 1px solid rgba(14,165,233,0.12); border-radius: 20px; padding: 32px; display: flex; align-items: center; justify-content: center; }
+  .label { color: #94A3B8; font-family: 'Syne', sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+  .variant-name { color: #38BDF8; font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; }
+  h1 { color: #F8FAFC; font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.03em; }
+  p { color: #64748B; font-family: sans-serif; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Nordic Webpartner — 5 Logo Variants</h1>
+<p>NW clean i förgrunden + kompass bakom. Välj din favorit.</p>
+
+<div class="row">
+
+  <!-- VARIANT 1: Minimal — tunna rena linjer, serif-inspirerat NW -->
+  <div class="item">
+    <div class="preview-dark">
+      <svg width="140" height="140" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="v1g" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#7DD3FC"/>
+            <stop offset="100%" stop-color="#0EA5E9"/>
+          </linearGradient>
+          <filter id="v1f">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- bg compass: 3 rings, very faint -->
+        <circle cx="40" cy="40" r="38" stroke="#0EA5E9" stroke-width="0.6" opacity="0.15"/>
+        <circle cx="40" cy="40" r="28" stroke="#0EA5E9" stroke-width="0.5" opacity="0.1"/>
+        <circle cx="40" cy="40" r="18" stroke="#0EA5E9" stroke-width="0.4" opacity="0.07"/>
+        <!-- crosshair -->
+        <line x1="40" y1="2" x2="40" y2="78" stroke="#0EA5E9" stroke-width="0.4" opacity="0.08"/>
+        <line x1="2" y1="40" x2="78" y2="40" stroke="#0EA5E9" stroke-width="0.4" opacity="0.08"/>
+        <!-- N: serif-influenced, clean tall strokes -->
+        <path d="M12 58 L12 22 L28 52 L28 22" stroke="url(#v1g)" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter" filter="url(#v1f)"/>
+        <!-- W: symmetrical, mid-depth -->
+        <path d="M34 22 L40 50 L46 34 L52 50 L58 22" stroke="url(#v1g)" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" filter="url(#v1f)"/>
+        <!-- north tick accent -->
+        <line x1="40" y1="2" x2="40" y2="10" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+    </div>
+    <span class="variant-name">1 — Minimal</span>
+    <span class="label">Tunna raka linjer<br>square caps · klassisk</span>
+  </div>
+
+  <!-- VARIANT 2: Bold — tjocka fylliga bokstäver, stark glow, kompassen mer synlig -->
+  <div class="item">
+    <div class="preview-dark">
+      <svg width="140" height="140" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="v2g" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#38BDF8"/>
+            <stop offset="60%" stop-color="#0EA5E9"/>
+            <stop offset="100%" stop-color="#6366F1"/>
+          </linearGradient>
+          <filter id="v2f">
+            <feGaussianBlur stdDeviation="3.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- bg compass: more visible rings -->
+        <circle cx="40" cy="40" r="38" stroke="#0EA5E9" stroke-width="1" opacity="0.22"/>
+        <circle cx="40" cy="40" r="28" stroke="#0EA5E9" stroke-width="0.8" opacity="0.15"/>
+        <!-- 4 compass ticks outside outer ring -->
+        <line x1="40" y1="1" x2="40" y2="8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <line x1="40" y1="72" x2="40" y2="79" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <line x1="1" y1="40" x2="8" y2="40" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <line x1="72" y1="40" x2="79" y2="40" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <!-- N: bold rounded -->
+        <path d="M11 60 L11 20 L28 52 L28 20" stroke="url(#v2g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#v2f)"/>
+        <!-- W: bold rounded -->
+        <path d="M33 20 L40 52 L47 34 L54 52 L61 20" stroke="url(#v2g)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#v2f)"/>
+      </svg>
+    </div>
+    <span class="variant-name">2 — Bold Glow</span>
+    <span class="label">Tjock + stark glow<br>kraftfull · premium</span>
+  </div>
+
+  <!-- VARIANT 3: Geometric — NW som trianglar/pilar, nordstjärna-känsla -->
+  <div class="item">
+    <div class="preview-dark">
+      <svg width="140" height="140" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="v3g" x1="0" y1="80" x2="80" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0EA5E9"/>
+            <stop offset="100%" stop-color="#7DD3FC"/>
+          </linearGradient>
+          <filter id="v3f">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- bg: hexagon compass -->
+        <polygon points="40,3 72,21 72,59 40,77 8,59 8,21" stroke="#0EA5E9" stroke-width="0.7" fill="none" opacity="0.18"/>
+        <polygon points="40,14 62,27 62,53 40,66 18,53 18,27" stroke="#0EA5E9" stroke-width="0.5" fill="none" opacity="0.1"/>
+        <!-- N: constructed from two triangles (geometric) -->
+        <path d="M10 58 L10 22 L27 50 L27 22" stroke="url(#v3g)" stroke-width="4.5" stroke-linecap="butt" stroke-linejoin="bevel" filter="url(#v3f)"/>
+        <!-- W: angular geometric, sharp -->
+        <path d="M32 22 L38 52 L44 35 L50 52 L56 22" stroke="url(#v3g)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel" filter="url(#v3f)"/>
+        <!-- north arrow tip — geometric diamond -->
+        <path d="M40 2 L43 8 L40 6 L37 8 Z" fill="#38BDF8" opacity="0.7"/>
+      </svg>
+    </div>
+    <span class="variant-name">3 — Geo + Hex</span>
+    <span class="label">Hexagon bakgrund<br>skarp · tech-forward</span>
+  </div>
+
+  <!-- VARIANT 4: Split — N och W i olika färger/opacitet, modernistiskt -->
+  <div class="item">
+    <div class="preview-dark">
+      <svg width="140" height="140" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="v4gN" x1="0" y1="0" x2="30" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#7DD3FC"/>
+            <stop offset="100%" stop-color="#0EA5E9"/>
+          </linearGradient>
+          <linearGradient id="v4gW" x1="30" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#818CF8"/>
+            <stop offset="100%" stop-color="#6366F1"/>
+          </linearGradient>
+          <filter id="v4fN">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="v4fW">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- bg compass rings -->
+        <circle cx="40" cy="40" r="38" stroke="#0EA5E9" stroke-width="0.6" opacity="0.13"/>
+        <circle cx="40" cy="40" r="27" stroke="#818CF8" stroke-width="0.5" opacity="0.1"/>
+        <!-- vertical divider -->
+        <line x1="40" y1="10" x2="40" y2="70" stroke="#334155" stroke-width="0.5" opacity="0.4"/>
+        <!-- N: cyan -->
+        <path d="M10 58 L10 22 L27 52 L27 22" stroke="url(#v4gN)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#v4fN)"/>
+        <!-- W: indigo -->
+        <path d="M33 22 L39.5 52 L46 34 L52.5 52 L59 22" stroke="url(#v4gW)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#v4fW)"/>
+        <!-- north tick -->
+        <line x1="40" y1="2" x2="40" y2="9" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+    <span class="variant-name">4 — Split Tone</span>
+    <span class="label">N=cyan · W=indigo<br>tvåfärgad · modern</span>
+  </div>
+
+  <!-- VARIANT 5: Enclosed — NW inuti cirkelring, badge-stil, liten nordstjärna -->
+  <div class="item">
+    <div class="preview-dark">
+      <svg width="140" height="140" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="v5g" x1="10" y1="10" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#38BDF8"/>
+            <stop offset="100%" stop-color="#0EA5E9"/>
+          </linearGradient>
+          <filter id="v5f">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Outer circle — the badge border, more visible -->
+        <circle cx="40" cy="40" r="37" stroke="url(#v5g)" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <!-- Inner ring -->
+        <circle cx="40" cy="40" r="30" stroke="url(#v5g)" stroke-width="0.6" fill="none" opacity="0.2"/>
+        <!-- 8 compass tick marks on outer ring -->
+        <line x1="40" y1="3"  x2="40" y2="11" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+        <line x1="40" y1="69" x2="40" y2="77" stroke="#0EA5E9" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <line x1="3"  y1="40" x2="11" y2="40" stroke="#0EA5E9" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <line x1="69" y1="40" x2="77" y2="40" stroke="#0EA5E9" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <!-- diagonal ticks smaller -->
+        <line x1="13" y1="13" x2="18" y2="18" stroke="#0EA5E9" stroke-width="0.8" stroke-linecap="round" opacity="0.2"/>
+        <line x1="62" y1="13" x2="67" y2="18" stroke="#0EA5E9" stroke-width="0.8" stroke-linecap="round" opacity="0.2"/>
+        <line x1="13" y1="62" x2="18" y2="67" stroke="#0EA5E9" stroke-width="0.8" stroke-linecap="round" opacity="0.2"/>
+        <line x1="62" y1="62" x2="67" y2="67" stroke="#0EA5E9" stroke-width="0.8" stroke-linecap="round" opacity="0.2"/>
+        <!-- NW centered, compact -->
+        <path d="M13 57 L13 23 L28 50 L28 23" stroke="url(#v5g)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#v5f)"/>
+        <path d="M33 23 L39.5 50 L46 33 L52.5 50 L59 23" stroke="url(#v5g)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#v5f)"/>
+      </svg>
+    </div>
+    <span class="variant-name">5 — Badge</span>
+    <span class="label">Synlig cirkel + 8 ticks<br>badge-stil · distinkt</span>
+  </div>
+
+</div>
+</body>
+</html>
