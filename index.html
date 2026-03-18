@@ -506,13 +506,19 @@ nav {
 
 .pc-price {
   font-family: 'Syne', sans-serif; font-weight: 800;
-  font-size: 3.5rem; line-height: 1;
+  font-size: 2.5rem; line-height: 1.1;
   background: linear-gradient(135deg, var(--blue), var(--blue2));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   margin-bottom: 0.4rem;
+  display: flex; align-items: baseline; gap: 6px;
+}
+.pc-price .price-currency {
+  font-size: 1rem; font-family: 'Outfit', sans-serif; font-weight: 500;
+  -webkit-text-fill-color: var(--gray); color: var(--gray);
+  background: none; -webkit-background-clip: unset;
 }
 .pc-price sub {
-  font-size: 1.1rem; font-family: 'Outfit', sans-serif; font-weight: 500;
+  font-size: 1rem; font-family: 'Outfit', sans-serif; font-weight: 500;
   -webkit-text-fill-color: var(--gray); color: var(--gray);
 }
 
@@ -870,7 +876,7 @@ footer p { color: var(--muted); font-size: 0.82rem; }
         <div class="pc-badge">Mest populär</div>
         <div class="pc-name">Standard</div>
         <div class="pc-desc">Perfekt för restauranger och småföretag</div>
-        <div class="pc-price">5 995<sub> kr</sub></div>
+        <div class="pc-price">5 995 <span class="price-currency">kr</span></div>
         <div class="pc-note">Engångsbelopp · Inga månadsavgifter</div>
         <div class="pc-divider"></div>
         <ul class="pc-features">
@@ -886,7 +892,7 @@ footer p { color: var(--muted); font-size: 0.82rem; }
       <div class="pc rv rv-d2" id="card-premium">
         <div class="pc-name">Premium</div>
         <div class="pc-desc">För företag som vill ha det lilla extra</div>
-        <div class="pc-price">7 500<sub> kr</sub></div>
+        <div class="pc-price">7 500 <span class="price-currency">kr</span></div>
         <div class="pc-note">Engångsbelopp · Inga månadsavgifter</div>
         <div class="pc-divider"></div>
         <ul class="pc-features">
