@@ -370,14 +370,16 @@ nav {
 .rv {
   opacity: 0; transform: translateY(32px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+  animation: rv-fallback 0.7s ease 1.2s forwards;
 }
-.rv.show { opacity: 1; transform: none; }
-.rv-d1 { transition-delay: 0.1s; }
-.rv-d2 { transition-delay: 0.2s; }
-.rv-d3 { transition-delay: 0.3s; }
-.rv-d4 { transition-delay: 0.4s; }
-.rv-d5 { transition-delay: 0.5s; }
-.rv-d6 { transition-delay: 0.6s; }
+.rv.show { opacity: 1; transform: none; animation: none; }
+@keyframes rv-fallback { to { opacity: 1; transform: translateY(0); } }
+.rv-d1 { transition-delay: 0.1s; animation-delay: 1.3s; }
+.rv-d2 { transition-delay: 0.2s; animation-delay: 1.4s; }
+.rv-d3 { transition-delay: 0.3s; animation-delay: 1.5s; }
+.rv-d4 { transition-delay: 0.4s; animation-delay: 1.6s; }
+.rv-d5 { transition-delay: 0.5s; animation-delay: 1.7s; }
+.rv-d6 { transition-delay: 0.6s; animation-delay: 1.8s; }
 
 /* ══════════════════════════════════════
    SERVICES
