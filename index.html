@@ -695,35 +695,36 @@ footer p { color: var(--muted); font-size: 0.82rem; }
 
 <nav>
   <a href="#" class="logo">
-    <!-- LOGO: Nordic Webpartner Mark — Hexagon + NW + glow -->
+    <!-- LOGO: Kompass + bold NW -->
     <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stop-color="#38BDF8"/>
-          <stop offset="50%" stop-color="#0EA5E9"/>
+          <stop offset="60%" stop-color="#0EA5E9"/>
           <stop offset="100%" stop-color="#818CF8"/>
         </linearGradient>
-        <linearGradient id="lg1a" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#0EA5E9"/>
-          <stop offset="100%" stop-color="#38BDF8"/>
-        </linearGradient>
         <filter id="nw-glow">
-          <feGaussianBlur stdDeviation="1.2" result="blur"/>
+          <feGaussianBlur stdDeviation="1.5" result="blur"/>
           <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
       </defs>
-      <!-- Hexagon outer -->
-      <path d="M20 1.5 L35.5 10.25 L35.5 29.75 L20 38.5 L4.5 29.75 L4.5 10.25 Z"
-        stroke="url(#lg1)" stroke-width="1" fill="none" opacity="0.45"/>
-      <!-- Hexagon fill subtle -->
-      <path d="M20 1.5 L35.5 10.25 L35.5 29.75 L20 38.5 L4.5 29.75 L4.5 10.25 Z"
-        fill="url(#lg1)" fill-opacity="0.05"/>
-      <!-- N letterform — clean, geometric -->
-      <path d="M8 29L8 11L18 25L18 11" stroke="url(#lg1a)" stroke-width="2.8"
+      <!-- Outer ring -->
+      <circle cx="20" cy="20" r="18.5" stroke="url(#lg1)" stroke-width="1" opacity="0.35"/>
+      <!-- Inner ring -->
+      <circle cx="20" cy="20" r="13" stroke="url(#lg1)" stroke-width="0.75" opacity="0.2"/>
+      <!-- Compass points — 4 spokes -->
+      <line x1="20" y1="1.5" x2="20" y2="7" stroke="url(#lg1)" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+      <line x1="20" y1="33" x2="20" y2="38.5" stroke="url(#lg1)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+      <line x1="1.5" y1="20" x2="7" y2="20" stroke="url(#lg1)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+      <line x1="33" y1="20" x2="38.5" y2="20" stroke="url(#lg1)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+      <!-- N — bold, bright, with glow -->
+      <path d="M7 28L7 12L14.5 22L14.5 12" stroke="url(#lg1)" stroke-width="3.2"
         stroke-linecap="round" stroke-linejoin="round" filter="url(#nw-glow)"/>
-      <!-- W letterform — elegant, smaller -->
-      <path d="M21 12L24.5 26L28 16L31.5 26L35 12" stroke="url(#lg1)" stroke-width="2.2"
-        stroke-linecap="round" stroke-linejoin="round" opacity="0.85" filter="url(#nw-glow)"/>
+      <!-- W — bold, bright, with glow -->
+      <path d="M17 12L20 24L23 16L26 24L29 12" stroke="url(#lg1)" stroke-width="2.8"
+        stroke-linecap="round" stroke-linejoin="round" filter="url(#nw-glow)"/>
+      <!-- Center dot -->
+      <circle cx="20" cy="20" r="1.5" fill="#38BDF8" opacity="0.6"/>
     </svg>
     <span class="logo-name">Nordic<span>Webpartner</span></span>
   </a>
@@ -1007,22 +1008,23 @@ footer p { color: var(--muted); font-size: 0.82rem; }
         <defs>
           <linearGradient id="lg3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="#38BDF8"/>
-            <stop offset="50%" stop-color="#0EA5E9"/>
+            <stop offset="60%" stop-color="#0EA5E9"/>
             <stop offset="100%" stop-color="#818CF8"/>
           </linearGradient>
-          <linearGradient id="lg3a" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#0EA5E9"/>
-            <stop offset="100%" stop-color="#38BDF8"/>
-          </linearGradient>
-          <filter id="nw-glow2">
-            <feGaussianBlur stdDeviation="1.2" result="blur"/>
+          <filter id="nw-glow3">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
             <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
         </defs>
-        <path d="M20 1.5 L35.5 10.25 L35.5 29.75 L20 38.5 L4.5 29.75 L4.5 10.25 Z" stroke="url(#lg3)" stroke-width="1" fill="none" opacity="0.45"/>
-        <path d="M20 1.5 L35.5 10.25 L35.5 29.75 L20 38.5 L4.5 29.75 L4.5 10.25 Z" fill="url(#lg3)" fill-opacity="0.05"/>
-        <path d="M8 29L8 11L18 25L18 11" stroke="url(#lg3a)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#nw-glow2)"/>
-        <path d="M21 12L24.5 26L28 16L31.5 26L35 12" stroke="url(#lg3)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" filter="url(#nw-glow2)"/>
+        <circle cx="20" cy="20" r="18.5" stroke="url(#lg3)" stroke-width="1" opacity="0.35"/>
+        <circle cx="20" cy="20" r="13" stroke="url(#lg3)" stroke-width="0.75" opacity="0.2"/>
+        <line x1="20" y1="1.5" x2="20" y2="7" stroke="url(#lg3)" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <line x1="20" y1="33" x2="20" y2="38.5" stroke="url(#lg3)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <line x1="1.5" y1="20" x2="7" y2="20" stroke="url(#lg3)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <line x1="33" y1="20" x2="38.5" y2="20" stroke="url(#lg3)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <path d="M7 28L7 12L14.5 22L14.5 12" stroke="url(#lg3)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#nw-glow3)"/>
+        <path d="M17 12L20 24L23 16L26 24L29 12" stroke="url(#lg3)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#nw-glow3)"/>
+        <circle cx="20" cy="20" r="1.5" fill="#38BDF8" opacity="0.6"/>
       </svg>
       <span class="logo-name">Nordic<span>Webpartner</span></span>
     </a>
